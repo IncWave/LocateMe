@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".startActivity.StartActivity">
+
+    <TextView
+        android:id="@+id/activity_start_logo_name"
+        tools:text="logo_name"
+        android:textSize="@dimen/text_size20sp"
+        android:layout_marginTop="@dimen/margin18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/activity_start_welcome_text"
+        tools:text="WELCOME"
+        android:textSize="@dimen/text_size30sp"
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/activity_start_logo_name"/>
+
+
+    <TextView
+        android:id="@+id/activity_start_second_welcome_text"
+        tools:text="let's go to check your permissions"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/activity_start_welcome_text"/>
+
+    <ImageView
+        android:id="@+id/activity_start_image_of_lock"
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/activity_start_next_button"
+        android:layout_below="@id/activity_start_second_welcome_text"
+        android:contentDescription="@string/image_lock" />
+
+    <Button
+        android:id="@+id/activity_start_next_button"
+        android:text="@string/next"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="@dimen/margin18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".mainActivity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_main_container_for_buttons"
+        android:padding="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/activity_main_go_zero_fragment_button"
+            android:onClick="onClickOrientation"
+            android:src="@drawable/list_36dp"
+            android:backgroundTint="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/go_to_the_list_of_rooms" />
+        <ImageButton
+            android:id="@+id/activity_main_go_first_fragment_button"
+            android:onClick="onClickOrientation"
+            android:src="@drawable/map_pin_grey36dp"
+            android:backgroundTint="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/go_to_the_map" />
+        <ImageButton
+            android:id="@+id/activity_main_go_second_fragment_button"
+            android:onClick="onClickOrientation"
+            android:src="@drawable/chart_grey36dp"
+            android:backgroundTint="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/go_to_the_statistic" />
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/activity_main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_main_container_for_buttons"/>
+
+
+</RelativeLayout>

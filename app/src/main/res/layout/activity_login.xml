@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".login.LoginActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <TextView
+        android:id="@+id/login_activity_title"
+        android:text="@string/login"
+        android:textSize="@dimen/text_size30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_margin="@dimen/margin_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"/>
+
+
+    <TextView
+        android:id="@+id/login_activity_welcome_text"
+        tools:text="some welcome to login text...."
+        android:textSize="@dimen/text_size16sp"
+        android:layout_marginTop="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_activity_title"
+        android:layout_above="@id/login_activity_padding_for_input"/>
+
+    <RelativeLayout
+        android:id="@+id/login_activity_padding_for_input"
+        android:padding="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/login_activity_email"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"
+            app:met_maxCharacters="30"
+            app:met_minCharacters="6"
+            app:met_clearButton="true"
+            app:met_iconPadding="2dp"
+            app:met_iconLeft="@drawable/ic_profile"
+            app:met_textColor="@color/colorGrey"
+            app:met_baseColor="@color/colorAccentLight"
+            app:met_checkCharactersCountAtBeginning="false"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/login_activity_password"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:met_maxCharacters="30"
+            app:met_minCharacters="6"
+            app:met_helperText="1 Digit, 1 Lower and Upper case letter"
+            app:met_clearButton="true"
+            app:met_iconPadding="2dp"
+            app:met_iconLeft="@drawable/ic_lock_open"
+            app:met_textColor="@color/colorGrey"
+            app:met_baseColor="@color/colorAccentLight"
+            app:met_checkCharactersCountAtBeginning="false"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/login_activity_email"/>
+
+        <TextView
+            android:id="@+id/login_activity_wrong_input_message"
+            android:text="@string/wrong_email_or_password"
+            android:textColor="@color/colorRed"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/login_activity_password"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/login_activity_padding_for_input">
+        <Button
+            android:id="@+id/login_activity_next_button"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_background_2"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/login_activity_progress_bar"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            style="@style/Widget.AppCompat.ProgressBar"/>
+
+        <RadioButton
+            android:id="@+id/login_activity_save_me_radio_button"
+            android:text="@string/remember_me"
+            android:maxWidth="200dp"
+            android:layout_margin="@dimen/margin_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_activity_go_to_registration_button"
+        android:enabled="false"
+        android:text="@string/sign_up"
+        android:textSize="@dimen/text_size20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGrey"
+        android:shadowRadius="0"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/b_shape_left_circle_pressed"
+        android:backgroundTint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="RelativeOverlap" />
+
+
+
+    <!--visual-->
+    <Button
+        android:id="@+id/circle_1"
+        android:clickable="false"
+        android:shadowRadius="0"
+        android:background="@drawable/b_shape_quarter_top_right_circle"
+        android:backgroundTint="@color/colorAccentLight"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:clickable="false"
+        android:shadowRadius="0"
+        android:background="@drawable/b_shape_circle"
+        android:backgroundTint="@color/colorAccentLight"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toStartOf="@id/circle_1"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="34dp" />
+
+    <Button
+        android:clickable="false"
+        android:shadowRadius="0"
+        android:background="@drawable/b_shape_circle"
+        android:backgroundTint="@color/colorAccentLight"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

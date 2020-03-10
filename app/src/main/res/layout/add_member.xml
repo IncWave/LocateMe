@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/add_member_id"
+        android:inputType="text"
+        android:hint="@string/paste_here_member_id"
+        app:met_minCharacters="@integer/min_length5"
+        app:met_maxCharacters="@integer/max_length20"
+        app:met_clearButton="true"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/add_member_select_group_view"
+        android:layout_marginTop="@dimen/margin18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"/>
+    <Button
+        android:id="@+id/add_member_ok"
+        android:text="@string/ok1"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/margin18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

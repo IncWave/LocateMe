@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".permissionActivity.PermissionActivity">
+
+    <TextView
+        android:id="@+id/permission_activity_logo_name"
+        tools:text="logo_name"
+        android:textSize="@dimen/text_size20sp"
+        android:layout_marginTop="@dimen/margin18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/permission_activity_permission_title"
+        tools:text="Permissions"
+        android:textSize="@dimen/text_size30sp"
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/permission_activity_logo_name"/>
+
+
+    <TextView
+        android:id="@+id/permission_activity_second_permission_text"
+        tools:text="For normal working of the app...."
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/permission_activity_permission_title"/>
+
+    <ImageView
+        android:id="@+id/image_of_permission"
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/image_lock"
+        android:layout_above="@id/permission_activity_description_layout"
+        android:layout_below="@id/permission_activity_second_permission_text" />
+
+    <RelativeLayout
+        android:id="@+id/permission_activity_description_layout"
+        android:padding="@dimen/margin18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/permission_activity_next_button">
+        <ImageView
+            android:id="@+id/permission_activity_geolocation_icon"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/geolocation_icon" />
+        <TextView
+            android:id="@+id/permission_activity_name_of_permission"
+            tools:text="Geolocation"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/permission_activity_geolocation_icon" />
+
+        <TextView
+            android:id="@+id/permission_activity_explanation_of_description"
+            tools:text="soemdsfdsfsdfdsfdsfdsfdsfdsfsd
+            sdfdsfdsfdsfdsfdsfdsfdsfsdfdsfdsfsdfdsfdsfdsfdsf
+            sdfsdfdsfdsfdasdasdsadsasfdsfdsfsdfdsfsdfdsfdsf
+            sasdsadsadasddfdsfsdfdfsdfsdfdsfsdfdsfdsfdsfds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/permission_activity_name_of_permission" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/permission_activity_next_button"
+        android:text="@string/next"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="@dimen/margin18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
